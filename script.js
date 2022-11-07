@@ -1,29 +1,20 @@
-var scrolly = document.querySelector("h1");
-var paragraph = document.getElementById("lorem");
-var titleChange = document.getElementsById("scrolly");
+var titleElement = document.getElementById("title");
+var instructions = document.getElementById("lorem");
 
-
-
-
-
-scrolly.addEventListener("click", printIt, true);
-paragraph.addEventListener("click", changeColor, true);
-
-titleChange.addEventListener("dbclick", titleChangeFunc, true)
-
-
-function printIt(e) {
-    console.log("Mouse clicked on the title!");
+titleElement.addEventListener("click", colorTitle);
+titleElement.addEventListener("dblclick", dbClick);
+instructions.addEventListener("click", changeInstructions);
+function colorTitle(){
+    console.log("title is clicked")
+    titleElement.style.color = "red";
 }
 
-
-function changeColor(e){
-    document.getElementById("lorem").style.color = "lightblue";
-
+function dbClick(){
+    console.log("double click!");
+    titleElement.style.fontFamily = "comicSans";
 }
 
-function titleChangeFunc(e) {
-    console.log("new name");
-
-    textContent = "Oppa Gangnam Style!";
+function changeInstructions(){
+    
+    instructions.textContent = "Have a great day! :)"
 }
